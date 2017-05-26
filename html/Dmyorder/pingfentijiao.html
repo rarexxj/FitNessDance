@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
+    <meta name="renderer" content="webkit">
+    <title>Amazing23健身</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <script src="../../js/plug-in/jquery-1.11.1.min.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+
+<body style="background:#1e1e1e;">
+<div class="pingfentijiao-box ">
+    <div class="pingfentijiao-banner">
+        <h2>请您对教练进行评价！</h2>
+        <div class="pingfentijiao-starsbox">
+            <span class="pingfentijiao-stars shine"></span>
+            <span class="pingfentijiao-stars "></span>
+            <span class="pingfentijiao-stars "></span>
+            <span class="pingfentijiao-stars "></span>
+            <span class="pingfentijiao-stars "></span>
+        </div>
+    </div>
+    <div class="pingfentijiao-pingjia">
+        <span class="active">很用心</span>
+        <span>专业技术有待提高</span>
+        <span>一般般</span>
+        <span>非常nice</span>
+    </div>
+    <div class="saywordbox">
+        <textarea name="" id="" rows="8" class="sayword" placeholder="我有话说"></textarea>
+        <a class="leimeiyuyue-footer2" href="##">确认提交</a>
+    </div>
+
+
+</div>
+
+</body>
+<script>
+
+    $(function () {
+//        星星
+        $('.pingfentijiao-stars').on('click', function () {
+            var _index = $(this).index();
+            $('.pingfentijiao-stars').removeClass('shine')
+
+            for (i = 0; i < _index + 1; i++) {
+                $('.pingfentijiao-stars').eq(i).addClass('shine');
+            }
+
+        })
+//        评价
+        $('.pingfentijiao-pingjia span').on('click', function () {
+
+            $(this).toggleClass('active');
+        })
+    })
+
+</script>
+</html>

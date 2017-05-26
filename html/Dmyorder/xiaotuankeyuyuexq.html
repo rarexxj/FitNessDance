@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
+    <meta name="renderer" content="webkit">
+    <title>Amazing23健身</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <script src="../../js/plug-in/jquery-1.11.1.min.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+
+<body style="background:#1e1e1e;">
+<div class="leimeiyuyue-box ">
+    <div class="leimeiyuyue-main">
+        <div class="leimeiyuyue-erweima">
+            <img src="../../img/img3.png" alt="">
+            <span class="leimeiyuyue-erweimaspan">请在前台出示二维码签到</span>
+
+        </div>
+    </div>
+    <div class="leimeiyuyue-informationbox">
+        <ul class="">
+            <li class="leimeiyuyue-informationbox2">
+                <div class="infleft">使用期限:</div>
+                <span class="infright">2016.10.30 19:00-19:45</span>
+            </li>
+            <li class="leimeiyuyue-informationbox2">
+                <div class="infleft">预约课程:</div>
+                <span class="infright">活力瑜伽</span>
+            </li>
+            <li class="leimeiyuyue-informationbox2">
+                <div class="infleft">预约教练:</div>
+                <span class="infright">Umi</span>
+            </li>
+            <li class="leimeiyuyue-informationbox2 kechenggoumai-informationbox1">
+                <div class="infleft">课时:</div>
+                <span>12课时</span>
+            </li>
+            <li class="leimeiyuyue-informationbox2">
+                <div class="infleft">预约门店:</div>
+                <span class="infright">联合大厦店</span>
+            </li>
+            <li class="leimeiyuyue-informationbox2">
+                <div class="infleft">门店地址:</div>
+                <span class="infright">西湖区联合大厦B座6F</span>
+            </li>
+        </ul>
+        <ul>
+            <li class="leimeiyuyue-informationbox2">
+                <div class="infleft">应付金额:</div>
+                <span class="infright">300元</span>
+            </li>
+            <li class="leimeiyuyue-informationbox2">
+                <div class="infleft">优惠费用:</div>
+                <span class="infright">20元</span>
+            </li>
+            <li class="leimeiyuyue-informationbox2 marginbot">
+                <div class="infleft">实付金额:</div>
+                <span class="infright">300元</span>
+            </li>
+        </ul>
+
+        <p class="leimeiyuyue-tip">课程开始前6小时取消预约，支持全额退款：6小时之内取消预约不支持退款</p>
+    </div>
+    <a class="kechenggoumai-footer" href="##">查看小团课详情</a>
+
+</div>
+
+<div class="zhezhao">
+    <div class="zhezhaoceng"></div>
+    <div class="tankuang">
+        <div class="tankuangtop"></div>
+        <p>确认取消该预约？资金将会退回您的账号余额</p>
+        <span class="tankuang-footer1">确认</span>
+        <span class="tankuang-footer2">取消</span>
+    </div>
+</div>
+
+</body>
+<script>
+
+    $(function () {
+        //评分
+        $('.leimeiyuyue-informationbox2').on('click', '.infright .stars', function () {
+            var _index=$(this).index();
+            $('.infright .stars').removeClass('shine')
+            for (i=0;i<_index+1;i++){
+                $('.infright .stars').eq(i).addClass('shine');
+            }
+
+        })
+    })
+
+</script>
+</html>

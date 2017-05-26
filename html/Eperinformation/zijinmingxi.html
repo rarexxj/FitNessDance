@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
+    <meta name="renderer" content="webkit">
+    <title>Amazing23健身</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <script src="../../js/plug-in/jquery-1.11.1.min.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+
+<body style="background: #1e1e1e">
+<div class="zijinmingxi-rechargeprice">
+    <div class="logo50"></div>
+    <span class="zijinmingxi-rechargepricespan1">充值金额：1000元</span>
+    <span class="zijinmingxi-rechargepricespan2">享受9.5折优惠</span>
+</div>
+<div class="zijinmingxi-rechargeprice2">
+    <div class="logo50"></div>
+    <span class="zijinmingxi-rechargepricespan1">剩余金额：500元</span>
+</div>
+<div class="zijinmingxi-nav clearfix">
+    <div class="zijinmingxi-navl fl active">收入</div>
+    <span class="zijinmingxi-navl-shu fl"></span>
+    <div class="zijinmingxi-navl fr">支出</div>
+</div>
+<div class="zijinmingxi-main1box">
+</div>
+<div class="bottom-navbox">
+    <ul>
+        <li class="bottom-nav1">
+            <a href="##">
+                <div class="bottom-nav1logo"></div>
+                <span>门店</span></a>
+        </li>
+        <li class="bottom-nav2">
+            <a href="##">
+                <div class="bottom-nav2logo"></div>
+                <span>课程</span></a>
+        </li>
+        <li class="bottom-nav3  active ">
+            <a href="##">
+                <div class="bottom-nav3logo"></div>
+                <span class="active">已约</span></a>
+        </li>
+        <li class="bottom-nav4">
+            <a href="##">
+                <div class="bottom-nav4logo"></div>
+                <span>我的</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    $(function () {
+        var flag = true;
+        var loadInd = 0;
+
+        $('.zijinmingxi-nav>div').on('click', function () {
+            $(this).siblings('div').removeClass('active')
+            $(this).addClass('active');
+            if (loadInd == 0) {
+                loadText();
+                loadInd++;
+            }
+
+        });
+
+
+        function loadText() {
+            var url = 'zijinmingxi-main1.html';
+
+            $.get(url, {
+                sign: 1
+            }, function (re) {
+                if ($.trim(re.length)) {
+                    $('.zijinmingxi-main1box').append(re);
+                    flag = true;
+                }
+            });
+        }
+
+        $(window).scroll(function () {
+            var H = $('body,html').height();
+            var h = $(window).height();
+            var t = $('body').scrollTop();
+
+            if (t >= H - h * 1.1 && flag == true) {
+                flag = false;
+                loadText();
+            }
+        })
+    })
+</script>
+
+</html>
